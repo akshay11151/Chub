@@ -1,0 +1,59 @@
+.explore-page {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.explore-page h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.community-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #dcdde1;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.community-card h3 {
+  margin: 0;
+}
+
+.community-card button {
+  background-color: #44bd32;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.join-btn {
+  background-color: #44bd32;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.join-btn:hover {
+  background-color: #4cd137;
+}
+
+.joined-btn {
+  background-color: #dcdde1;
+  color: #7f8c8d;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: default;
+}
