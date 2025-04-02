@@ -3,6 +3,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { doc, setDoc, getDocs, collection } from 'firebase/firestore';
 import { auth, db } from '../firebase';
 import { useNavigate } from 'react-router-dom';
+import './Signup.css';
 
 function Signup() {
   const [email, setEmail] = useState('');
@@ -34,14 +35,19 @@ function Signup() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className='auth-wrapper'>
+    
+    <form className='auth-form' onSubmit={handleSubmit}>
       <h2>Sign Up</h2>
+      <div className='form-group'>
       <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} required />
       <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
       <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+      </div>
       {error && <p>{error}</p>}
       <button type="submit">Sign Up</button>
     </form>
+    </div>
   );
 }
 
