@@ -11,6 +11,9 @@ import CreateCommunity from './pages/CreateCommunity';
 import CommunityPage from './pages/CommunityPage';
 import Explore from './pages/Explore';
 import './App.css';
+import './components/NavBar';
+import NavBar from './components/NavBar';
+import EditProfile from './pages/EditProfile';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -38,7 +41,7 @@ function App() {
 
   return (
     <Router>
-      {user && <ProfileDropdown user={user} />}
+      {user && <NavBar user={user} />}
       <Routes>
         <Route path="/login" element={!user ? <Login /> : <Navigate to="/" />} />
         <Route path="/signup" element={!user ? <Signup /> : <Navigate to="/" />} />
@@ -46,6 +49,7 @@ function App() {
         <Route path="/create-community" element={user ? <CreateCommunity user={user} /> : <Navigate to="/login" />} />
         <Route path="/community/:id" element={<CommunityPage user={user} />} />
         <Route path="/explore" element={<Explore user={user} />} />
+        <Route path="/edit-profile" element={<EditProfile user={user} />} />
       </Routes>
     </Router>
   );

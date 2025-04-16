@@ -1,0 +1,94 @@
+.edit-profile-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f2f5;
+}
+
+.edit-profile-form {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.edit-profile-form h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.edit-profile-form input {
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.edit-profile-form button {
+  padding: 0.75rem;
+  background-color: #2979ff;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.edit-profile-form button:hover {
+  background-color: #1e5fe1;
+}
+
+.edit-profile-form .success {
+  text-align: center;
+  color: #2ecc71;
+}
+
+.edit-profile-form .error {
+  text-align: center;
+  color: #e74c3c;
+}
+
+.success {
+  text-align: center;
+  color: #2ecc71;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.error {
+  text-align: center;
+  color: #e74c3c;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.toast-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #2ecc71;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  font-weight: 500;
+  z-index: 9999;
+  animation: fadein 0.3s ease, fadeout 0.3s ease 4.7s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeout {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-10px); }
+}
+

@@ -1,76 +1,118 @@
-.auth-wrapper {
-  height: 100%;
-  min-height: 100vh;
+body {
   margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f0f2f5;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #1e1b2e;
+  color: #fff;
 }
 
-.auth-form {
-  max-width: 360px;
+.login-wrapper {
+  display: flex;
+  height: 100vh;
   width: 100%;
-  background: #ffffff;
-  padding: 2.5rem;
-  border-radius: 24px;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.05);
+}
+
+.left-panel {
+  flex: 1;
+  background: url("../Signup.jpg") no-repeat center center/cover;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.branding {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+.right-panel {
+  flex: 1;
+  background-color: #2a263f;
+  display: flex;
   align-items: center;
-  gap: 1.25rem;
+  justify-content: center;
+  padding: 2rem;
 }
 
-.auth-form h2 {
-  text-align: center;
-  font-size: 1.75rem;
-  color: #1e272e;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.auth-form input {
+.login-form {
   width: 100%;
-  padding: 0.75rem 1rem;
-  border: 1px solid #dcdde1;
-  border-radius: 12px;
-  font-size: 1rem;
-  background-color: #fff;
-  transition: border 0.3s ease;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
 }
 
-.auth-form input:focus {
-  outline: none;
-  border-color: #487eb0;
-  box-shadow: 0 0 0 3px rgba(72, 126, 176, 0.15);
+.login-form h2 {
+  margin-bottom: 0.5rem;
+  color: #fff;
 }
 
-.auth-form input::placeholder {
-  color: #a4b0be;
-}
-
-.auth-form button {
-  padding: 0.85rem;
-  background-color: #2979ff;
-  color: white;
-  border: none;
-  border-radius: 16px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.auth-form button:hover {
-  background-color: #1e5fe1;
-}
-
-.auth-form p {
-  color: #e74c3c;
+.login-form p {
+  margin-bottom: 1.5rem;
   font-size: 0.9rem;
+  color: #aaa;
+}
+
+.login-form input {
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.95rem;
+}
+
+.btn {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background-color: #7a60f2;
+  color: white;
+}
+
+.btn.google {
+  background-color: #fff;
+  color: #000;
+}
+
+.divider {
   text-align: center;
-  margin-top: -0.5rem;
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: #aaa;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 45%;
+  height: 1px;
+  background-color: #444;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.error {
+  color: #ff7a7a;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
 }
 
