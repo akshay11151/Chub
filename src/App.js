@@ -6,7 +6,6 @@ import { doc, getDoc } from 'firebase/firestore';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-import ProfileDropdown from './components/ProfileDropdown';
 import CreateCommunity from './pages/CreateCommunity';
 import CommunityPage from './pages/CommunityPage';
 import Explore from './pages/Explore';
@@ -14,6 +13,7 @@ import './App.css';
 import './components/NavBar';
 import NavBar from './components/NavBar';
 import EditProfile from './pages/EditProfile';
+import PricingPage from './pages/PricingPage';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -50,6 +50,7 @@ function App() {
         <Route path="/community/:id" element={<CommunityPage user={user} />} />
         <Route path="/explore" element={<Explore user={user} />} />
         <Route path="/edit-profile" element={<EditProfile user={user} />} />
+        <Route path="/pricing" element={<PricingPage user={user} />} />
       </Routes>
     </Router>
   );

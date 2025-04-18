@@ -20,6 +20,7 @@ function NavBar({ user }) {
       </div>
       <div className="nav-right">
         <span className="username">{user?.username}</span>
+        <button onClick={() => navigate('/pricing')}>pricing</button>
         <button onClick={() => navigate('/edit-profile')}>Edit Profile</button>
         <button onClick={handleLogout}>Logout</button>
       </div>
