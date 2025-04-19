@@ -1,59 +1,82 @@
+/* Explore Page - Glassmorphic Search Bar */
+
 .explore-page {
+  max-width: 900px;
+  margin: 3rem auto;
   padding: 2rem;
-  max-width: 800px;
-  margin: auto;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  color: #000;
+  box-sizing:border-box;
 }
 
 .explore-page h2 {
+  font-size: 2rem;
   text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.search-bar {
+  width: 100%;
+  max-width:97%;
+  padding-top:0.8rem;
+  padding-bottom:0.8rem;
+  padding-right:0rem;
+  Padding-left:1.5rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: none;
   margin-bottom: 2rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  outline: none;
 }
 
 .community-card {
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid #dcdde1;
-  border-radius: 8px;
-  padding: 1rem;
-  margin-bottom: 1rem;
 }
 
 .community-card h3 {
   margin: 0;
+  font-size: 1.2rem;
+  color: #000;
 }
 
-.community-card button {
-  background-color: #44bd32;
-  color: white;
-  border: none;
-  border-radius: 6px;
+.join-btn,
+.joined-btn {
   padding: 0.5rem 1rem;
-  cursor: pointer;
-}
-
-.join-btn {
-  background-color: #44bd32;
-  color: white;
+  font-size: 0.95rem;
+  border-radius: 8px;
   border: none;
-  border-radius: 6px;
-  padding: 0.5rem 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
+.join-btn {
+  background-color: #4a90e2;
+  color: #fff;
+}
+
 .join-btn:hover {
-  background-color: #4cd137;
+  background-color: #4178c0;
 }
 
 .joined-btn {
-  background-color: #dcdde1;
-  color: #7f8c8d;
-  border: none;
-  border-radius: 6px;
-  padding: 0.5rem 1rem;
-  cursor: default;
+  background-color: #ccc;
+  color: #444;
+  cursor: not-allowed;
 }
+

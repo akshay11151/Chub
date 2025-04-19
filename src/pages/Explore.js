@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { db } from '../firebase';
-import { collection, getDocs, updateDoc, doc, arrayUnion, getDoc } from 'firebase/firestore';
+import { collection, getDocs, updateDoc, doc, arrayUnion } from 'firebase/firestore';
 import './Explore.css';
 
 function Explore({ user }) {
   const [communities, setCommunities] = useState([]);
   const [joinedCommunities, setJoinedCommunities] = useState(user.communities || []);
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     const fetchCommunities = async () => {
@@ -29,10 +30,23 @@ function Explore({ user }) {
     }
   };
 
+  const filteredCommunities = communities.filter(comm =>
+    comm.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className="explore-page">
       <h2>Explore Communities</h2>
-      {communities.map(comm => (
+
+      <input
+        type="text"
+        placeholder="Search communities..."
+        className="search-bar"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+
+      {filteredCommunities.map(comm => (
         <div key={comm.id} className="community-card">
           <h3>{comm.name}</h3>
           <button
@@ -49,3 +63,4 @@ function Explore({ user }) {
 }
 
 export default Explore;
+

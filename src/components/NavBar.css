@@ -41,3 +41,12 @@
   text-decoration: underline;
 }
 
+.username.clickable {
+  cursor: pointer;
+  font-weight: 600;
+  color: #000;
+  transition: text-decoration 0.2s ease;
+}
+.username.clickable:hover {
+  text-decoration: underline;
+}

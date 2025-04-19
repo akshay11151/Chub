@@ -19,7 +19,9 @@ function NavBar({ user }) {
         CollaborateHub
       </div>
       <div className="nav-right">
-        <span className="username">{user?.username}</span>
+        <span className="username clickable" onClick={() => navigate('/profile')}>
+          {user?.username}
+        </span>
         <button onClick={() => navigate('/pricing')}>pricing</button>
         <button onClick={() => navigate('/edit-profile')}>Edit Profile</button>
         <button onClick={handleLogout}>Logout</button>

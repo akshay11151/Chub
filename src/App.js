@@ -14,6 +14,7 @@ import './components/NavBar';
 import NavBar from './components/NavBar';
 import EditProfile from './pages/EditProfile';
 import PricingPage from './pages/PricingPage';
+import ProfilePage from './pages/ProfilePage';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -51,6 +52,7 @@ function App() {
         <Route path="/explore" element={<Explore user={user} />} />
         <Route path="/edit-profile" element={<EditProfile user={user} />} />
         <Route path="/pricing" element={<PricingPage user={user} />} />
+        <Route path="/profile" element={<ProfilePage user={user} />} />
       </Routes>
     </Router>
   );
